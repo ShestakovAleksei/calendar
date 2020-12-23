@@ -12,23 +12,22 @@ export class MonthSwitcherComponent implements OnInit {
   public currentYear: moment.Moment | string;
   date: moment.Moment | undefined;
 
-  constructor(private DateService: DateService) {
-    console.log(this.DateService);
+  constructor(private dateService: DateService) {
     this.currentYear = '';
     this.currentMonth = '';
-    this.DateService.dateStream$.subscribe(date => {
+    this.dateService.dateStream$.subscribe(date => {
       this.date = date;
       this.currentMonth = this.date.format('MMMM');
       this.currentYear = this.date.format('YYYY');
     })
-    this.DateService.dateStream$.next(moment());
+    this.dateService.dateStream$.next(moment());
 
   }
   ngOnInit(): void {
   }
 
   monthSwitcher(direction: number): void {
-    this.DateService.monthSwitcher(direction);
+    this.dateService.monthSwitcher(direction);
   }
 
 }
