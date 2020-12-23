@@ -7,6 +7,9 @@ import { BaseLayoutComponent } from './components/base-layout/base-layout.compon
 import { MonthSwitcherComponent } from './components/month-switcher/month-switcher.component';
 import { CalendarTableComponent } from './components/calendar-table/calendar-table.component';
 import { TableBodyComponent } from './components/table-body/table-body.component';
+import { DateService } from "./services/date.service";
+import { UserService } from "./services/user.service";
+import { VacationService } from "./services/vacation.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { TableBodyComponent } from './components/table-body/table-body.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DateService,
+    UserService,
+    VacationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
