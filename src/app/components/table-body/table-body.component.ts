@@ -18,6 +18,7 @@ export class TableBodyComponent implements OnInit {
   constructor() {
   }
 
+
   ngOnInit() {
   }
 

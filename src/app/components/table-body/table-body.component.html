@@ -1,17 +1,26 @@
-<tr class="team-head" *ngFor="let i of teams">
-  <td class="team-head__info">
-    <div class="team-head__info-inner">
-      <h2 class="team-head__name">{{ i.realm }}</h2>
-      <div class="team-head__participants-info">
-        <div class="team-head__participants">
-          <img  [src]="usersIcon" class="team-head__participants-icon">
-          <span class="team-head__participants-sum">{{ i.participants.length }}</span>
-        </div>
-        <div class="team-head__absents-participants">8%</div>
-        <button class="team-head__hideShowBtn">&and; </button>
+<tbody *ngFor="let team of teams">
+  <tr class="team-head">
+    <td class="team-head__info">
+      <div class="team-head__info-inner">
+        <h2 class="team-head__name">{{ team.realm }}</h2>
+        <div class="team-head__participants-info">
+          <div class="team-head__participants">
+            <img  [src]="usersIcon" class="team-head__participants-icon">
+            <span class="team-head__participants-sum">{{ team.participants.length }}</span>
+          </div>
+          <div class="team-head__absents-participants">8%</div>
+            <button class="team-head__hideShowBtn">&and; </button>
+          </div>
       </div>
-    </div>
-  </td>
-  <td class="team-head__empty-cell" *ngFor="let i of currentDays" [class.weekend]=i.isDayOff></td>
-  <td class="team-head__vacation-days-sum"></td>
-</tr>
+    </td>
+    <td class="team-head__empty-cell" *ngFor="let day of currentDays" [class.weekend]=day.isDayOff></td>
+    <td class="team-head__vacation-days-sum"></td>
+  </tr>
+  <tr class="team-body" *ngFor="let user of team.participants">
+    <td class="team-body__participant">{{ user.name }}</td>
+    <td class="team-body__vacation-cell" *ngFor="let day of currentDays" [class.weekend]=day.isDayOff></td>
+    <td class="team-body__vacation-days-sum">4</td>
+  </tr>
+</tbody>
+
+
