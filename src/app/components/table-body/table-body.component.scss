@@ -13,13 +13,18 @@
     padding: 8px;
   }
   &__name{
-    margin-right: 45px;
+    margin-right: auto;
     color: #000000;
     font-size: 14px;
     font-weight: 600;
     font-style: normal;
     letter-spacing: normal;
     line-height: 17px;
+  }
+  &__participants-info{
+    width: 92px;
+    display: flex;
+    justify-content: space-between;
   }
   &__absents-participants{
     width: 28px;

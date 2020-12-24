@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import { DateService } from "../../services/date.service";
 import { Day } from "../../models/day";
 import * as moment from "moment";

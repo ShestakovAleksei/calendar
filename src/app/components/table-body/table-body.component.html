@@ -1,13 +1,15 @@
-<tr class="team-head" >
+<tr class="team-head" *ngFor="let i of teams">
   <td class="team-head__info">
     <div class="team-head__info-inner">
-      <h2 class="team-head__name">Frontend Team</h2>
-      <div class="team-head__participants">
-        <span class="team-head__participants-icon">icon</span>
-        <span class="team-head__participants-sum">5</span>
+      <h2 class="team-head__name">{{ i.realm }}</h2>
+      <div class="team-head__participants-info">
+        <div class="team-head__participants">
+          <span class="team-head__participants-icon">icon</span>
+          <span class="team-head__participants-sum">5</span>
+        </div>
+        <div class="team-head__absents-participants">8%</div>
+        <button class="team-head__hideShowBtn">&and; </button>
       </div>
-      <div class="team-head__absents-participants">8%</div>
-      <button class="team-head__hideShowBtn">&and; </button>
     </div>
   </td>
   <td class="team-head__empty-cell" *ngFor="let i of currentDays" [class.weekend]=i.isDayOff></td>

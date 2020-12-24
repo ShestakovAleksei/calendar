@@ -1,7 +1,6 @@
 import {Team} from "../models/team";
 import {UserRealm} from "../models/user";
 
-
 export const teams: Team[] = [
   {
     realm: UserRealm.FRONT_END,
