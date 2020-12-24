@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {UserRealm} from '../../models/user';
+import {DateService} from "../../services/date.service";
+import {Day} from "../../models/day";
+import * as moment from "moment";
 
 @Component({
   selector: 'app-table-body',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableBodyComponent implements OnInit {
 
-  constructor() { }
+  @Input() currentDays: Day[] | undefined;
 
-  ngOnInit(): void {
+  constructor(private dateService: DateService) {
+
+  }
+
+  ngOnInit() {
   }
 
 }

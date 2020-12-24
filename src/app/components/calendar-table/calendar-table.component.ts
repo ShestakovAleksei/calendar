@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import { DateService } from "../../services/date.service";
 import { Day } from "../../models/day";
 import * as moment from "moment";
@@ -16,7 +16,6 @@ export class CalendarTableComponent implements OnInit {
   constructor(private dateService: DateService) {
     this.dateService.dateStream$.subscribe(date => {
       this.currentDays = this.fillDaysArray(date);
-      console.log(date)
     })
     this.dateService.dateStream$.next(moment().startOf('month'))
   }
@@ -38,7 +37,6 @@ export class CalendarTableComponent implements OnInit {
       dateInfo = dateInfo.add(1,'d').format();
       currentDays.push(day);
     }
-    console.log(currentDays);
     return currentDays;
   }
 

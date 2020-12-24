@@ -6,10 +6,9 @@
 }
 table {
   border-collapse: collapse;
-}
-
-td {
-  border: 1px solid #D7D7D7;
+  & td {
+    border: 1px solid #D7D7D7;
+  }
 }
 
 .weekend {
@@ -34,7 +33,7 @@ td {
 
 .addVacationCell {
   max-width: fit-content;
-  padding: 0 119px 24px 0;
+  padding: 0 0 24px 0;
   margin: 0;
   border-top: none;
   border-left: none;
@@ -51,7 +50,7 @@ td {
 .outputDate {
   text-align: center;
   color: #000;
-  font-size: 14;
+  font-size: 14px;
   font-weight: 600;
   line-height: 21px;
 }
@@ -59,7 +58,6 @@ td {
 .sumCell {
   font-size: 12px;
   line-height: 18px;
-  max-width: fit-content;
 }
 
 .addVacationBtn {
@@ -74,12 +72,14 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 119px;
+
+  & span {
+    font-size: 24px;
+    padding-right: 10px;
+  }
 }
 
-.addVacationBtn span {
-  font-size: 24px;
-  padding-right: 10px;
-}
 
 app-table-body {
   display: table-row-group;

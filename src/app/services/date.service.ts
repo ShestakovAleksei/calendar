@@ -7,7 +7,7 @@ import * as moment from 'moment';
 })
 export class DateService {
 
-  private date: moment.Moment | string | undefined;
+  private date: moment.Moment | undefined;
   public dateStream$: Subject<moment.Moment>;
   private lastDayofMonth: moment.Moment;
 
