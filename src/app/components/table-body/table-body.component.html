@@ -4,8 +4,8 @@
       <h2 class="team-head__name">{{ i.realm }}</h2>
       <div class="team-head__participants-info">
         <div class="team-head__participants">
-          <span class="team-head__participants-icon">icon</span>
-          <span class="team-head__participants-sum">5</span>
+          <img  [src]="usersIcon" class="team-head__participants-icon">
+          <span class="team-head__participants-sum">{{ i.participants.length }}</span>
         </div>
         <div class="team-head__absents-participants">8%</div>
         <button class="team-head__hideShowBtn">&and; </button>

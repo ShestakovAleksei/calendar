@@ -26,6 +26,20 @@
     display: flex;
     justify-content: space-between;
   }
+  &__participants-icon{
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+  }
+  &__participants-sum{
+    color: #949494;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 18px;
+    text-align: left;
+  }
   &__absents-participants{
     width: 28px;
     height: 15px;

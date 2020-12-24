@@ -4,7 +4,7 @@ import {DateService} from "../../services/date.service";
 import {Day} from "../../models/day";
 import {Subject} from "rxjs";
 import {Team} from "../../models/team";
-import { teams } from "../../DataBase/teamsDB";
+import { teams } from "../../dataBase/teamsDB";
 
 
 @Component({
@@ -18,6 +18,7 @@ export class TableBodyComponent implements OnInit {
   public teams: Team[] = teams;
   public userRealm = UserRealm;
   name: string | undefined;
+  public usersIcon: string = '../../assets/users.png'
 
   constructor(private dateService: DateService) {
   }
