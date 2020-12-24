@@ -17,7 +17,7 @@ export class CalendarTableComponent implements OnInit {
     this.dateService.dateStream$.subscribe(date => {
       this.currentDays = this.fillDaysArray(date);
     })
-    this.dateService.dateStream$.next(moment().startOf('month'))
+    this.dateService.dateStream$.next(moment().startOf('month'));
   }
 
 
