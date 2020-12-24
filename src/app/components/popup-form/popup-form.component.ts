@@ -11,6 +11,7 @@ export class PopupFormComponent implements OnInit {
   //
   // ngOnInit(): void {
   // }
+  campaignOne: any;
 
 }
 // ##################################################
@@ -69,13 +70,13 @@ import {MatDialog} from '@angular/material/dialog';
   selector: 'dialog-content-example',
   templateUrl: 'dialog-content-example.html',
 })
-export class DialogContentExample {
+export class DialogContentExampleComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogContentExampleDialog);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result: any) => {
       console.log(`Dialog result: ${result}`);
     });
   }

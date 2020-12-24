@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PopupFormComponent } from './components/popup-form/popup-form.component';
 import { PopupSpinnerComponent } from './components/popup-spinner/popup-spinner.component';
 import { PopupErrorComponent } from './components/popup-error/popup-error.component';
+import { DialogContentExampleComponent } from './components/popup-form/popup-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ export class AppModule { }
 // ############################################
 
 
-import {NgModule} from '@angular/core';
+
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -121,3 +122,6 @@ import {OverlayModule} from '@angular/cdk/overlay';
   ]
 })
 export class DemoMaterialModule {}
+
+
+
