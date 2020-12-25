@@ -26,7 +26,7 @@ export class MonthSwitcherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  monthSwitcher(direction: number): void {
+  switchMonth(direction: number): void {
     this.dateService.monthSwitcher(direction);
   }
 

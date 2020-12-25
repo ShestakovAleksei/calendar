@@ -7,8 +7,8 @@ import * as moment from 'moment';
 })
 export class DateService {
 
-  private date: moment.Moment | undefined;
   public dateStream$: Subject<moment.Moment>;
+  private date: moment.Moment | undefined;
   private lastDayofMonth: moment.Moment;
 
   constructor() {
@@ -18,8 +18,8 @@ export class DateService {
   }
 
   monthSwitcher(direction: number): void {
-    direction === -1 ?
-      this.dateStream$.next(moment(this.date).add(-1, 'M')):
-      this.dateStream$.next(moment(this.date).add(1, 'M'));
+    direction === -1
+      ? this.dateStream$.next(moment(this.date).add(-1, 'M'))
+      : this.dateStream$.next(moment(this.date).add(1, 'M'));
   }
 }
