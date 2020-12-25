@@ -1,0 +1,91 @@
+.popup{
+  width: 100%;
+  height: 397px;
+  display: flex;
+  flex-direction: column;
+  &__head{
+    width: 100%;
+    height: 49px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 80px 14px;
+  }
+  &__title{
+    color: #575757;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+  }
+  &__days-counter{
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: right;
+  }
+  &__body{
+    width: 100%;
+    padding: 40px 80px 48px;
+  }
+  &__dates-info{
+  }
+  &__subtitle{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+  }
+  &__inputs-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__date-input{
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    & input[type="date"] {
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+  }
+  &__vacation-info{
+    padding: 34px 0 0;
+  }
+  &__vacation-type{
+    width: 339px;
+    height: 41px;
+    border-radius: 3px;
+    border: none;
+    background-color: #e9e9e9;
+  }
+  &__foot{
+    height: 85px;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 0;
+  }
+  & .button{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: center;
+    width: 154px;
+    height: 42px;
+    border-radius: 4px;
+  }
+  &__accept-btn{
+    background-color: #48ba46;
+    color: #ffffff;
+  }
+}
