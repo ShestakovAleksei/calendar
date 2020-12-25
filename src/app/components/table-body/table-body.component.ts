@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Day} from "../../models/day";
+import {Team} from "../../models/team";
+import { teams } from "../../dataBase/teamsDB";
+
 
 @Component({
   selector: 'app-table-body',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableBodyComponent implements OnInit {
 
-  constructor() { }
+  @Input() currentDays: Day[] | undefined;
+  public teams: Team[] = teams;
+  public usersIcon: string = '../../assets/users.png'
 
-  ngOnInit(): void {
+  constructor() {
+  }
+
+
+  ngOnInit() {
   }
 
 }
