@@ -10,7 +10,7 @@ import * as moment from 'moment';
 export class MonthSwitcherComponent implements OnInit {
   public currentMonth: string;
   public currentYear: string;
-  public date: moment.Moment | undefined;
+  public date!: moment.Moment;
 
   constructor(private dateService: DateService) {
     this.currentYear = '';
@@ -26,7 +26,7 @@ export class MonthSwitcherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  monthSwitcher(direction: number): void {
+  switchMonth(direction: number): void {
     this.dateService.monthSwitcher(direction);
   }
 
