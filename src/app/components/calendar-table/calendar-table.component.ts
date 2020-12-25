@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { DateService } from "../../services/date.service";
 import { Day } from "../../models/day";
 import * as moment from "moment";
@@ -11,7 +11,9 @@ import * as moment from "moment";
 })
 export class CalendarTableComponent implements OnInit {
 
-  public currentDays: Day[] | undefined;
+
+  public currentDays!: Day[];
+
 
   constructor(private dateService: DateService) {
     this.dateService.dateStream$.subscribe(date => {
@@ -39,6 +41,11 @@ export class CalendarTableComponent implements OnInit {
     }
     return currentDays;
   }
+
+  showPopup(arg: any){
+    return arg
+  }
+
 
 
   ngOnInit(): void {

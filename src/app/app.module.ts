@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ModalModule } from "ngx-bootstrap/modal";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { TableBodyComponent } from './components/table-body/table-body.component
 import { DateService } from "./services/date.service";
 import { UserService } from "./services/user.service";
 import { VacationService } from "./services/vacation.service";
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { VacationService } from "./services/vacation.service";
     BaseLayoutComponent,
     MonthSwitcherComponent,
     CalendarTableComponent,
-    TableBodyComponent
+    TableBodyComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   providers: [
     DateService,
