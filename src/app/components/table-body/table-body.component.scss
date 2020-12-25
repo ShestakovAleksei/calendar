@@ -1,0 +1,103 @@
+.team-head{
+  background-color: rgba(155, 153, 255, 0.1);
+  &__info{
+    max-height: 31px;
+    max-width: 260px;
+    width: 100%;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+  }
+  &__info-inner{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 8px;
+  }
+  &__name{
+    margin-right: auto;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+  &__participants-info{
+    width: 92px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__participants-icon{
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+  }
+  &__participants-sum{
+    color: #949494;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+  }
+  &__absents-participants{
+    width: 28px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: #9b99ff;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 17px 0 13px;
+  }
+  &__hideShowBtn{
+    width: 12px;
+    height: 7px;
+    border: none;
+  }
+  &__empty-cell{
+    width: 32px;
+    height: 31px;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+  }
+  &__vacation-days-sum{
+    border: 1px solid rgba(126, 126, 126, 0.3);
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.team-body{
+  &__participant{
+    height: 31px;
+    max-width: 260px;
+    width: 100%;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    padding: 0 0 0 8px;
+  }
+  &__vacation-cell{
+    width: 32px;
+    height: 31px;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+  }
+  &__vacation-days-sum{
+    border: 1px solid rgba(126, 126, 126, 0.3);
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.weekend{
+  background: #F0F0F0;
+}
+
+
+.empty-space{
+  height: 35px;
+}

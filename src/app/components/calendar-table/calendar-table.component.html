@@ -1,1 +1,22 @@
-<p>calendar-table works!</p>
+<section class="calendar">
+  <table class="calendar__table">
+    <thead>
+      <tr class="outputCalendar">
+          <td class="addVacationCell outputItem">
+            <button class="addVacationBtn" (click)="showPopup(childRef.openModal())"><span>+</span>Add Vacation</button>
+          </td>
+          <td *ngFor="let day of currentDays" class="outputItem" [class.weekend]=day.isDayOff>
+            <div class="outputItem__wrapper">
+              <span class="outputDay">{{day.dayName}}</span>
+              <span class="outputDate">{{day.date}}</span>
+            </div>
+          </td>
+        <td class="sumCell outputItem"><span class="calendar__text">Sum</span></td>
+      </tr>
+    </thead>
+        <app-table-body [currentDays]="currentDays"></app-table-body>
+  </table>
+</section>
+<app-popup
+  #childRef
+></app-popup>

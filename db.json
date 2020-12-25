@@ -1,0 +1,160 @@
+{
+    "users": [
+        {
+            "_id": 1,
+            "name": "FE_Team_User1",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 2,
+            "name": "FE_Team_User2",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 3,
+            "name": "FE_Team_User3",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 4,
+            "name": "FE_Team_User4",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 5,
+            "name": "FE_Team_User5",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 6,
+            "name": "FE_Team_User6",
+            "team": "Frontend Team",
+            "dayOff": false
+        },
+
+
+
+
+        {
+            "_id": 7,
+            "name": "Des_Team_User1",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 8,
+            "name": "Des_Team_User2",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 9,
+            "name": "Des_Team_User3",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 10,
+            "name": "Des_Team_User4",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 11,
+            "name": "Des_Team_User5",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 12,
+            "name": "Des_Team_User6",
+            "team": "Designers Team",
+            "dayOff": false
+        },
+
+
+
+
+        {
+            "_id": 13,
+            "name": "BE_Team_User1",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 14,
+            "name": "BE_Team_User2",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 15,
+            "name": "BE_Team_User3",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 16,
+            "name": "BE_Team_User4",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 17,
+            "name": "BE_Team_User5",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+        {
+            "_id": 18,
+            "name": "BE_Team_User6",
+            "team": "Backend Team",
+            "dayOff": false
+        },
+
+
+
+
+        {
+            "_id": 19,
+            "name": "Man_Team_User1",
+            "team": "Managers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 20,
+            "name": "Man_Team_User2",
+            "team": "Managers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 21,
+            "name": "Man_Team_User3",
+            "team": "Managers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 22,
+            "name": "Man_Team_User4",
+            "team": "Managers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 23,
+            "name": "Man_Team_User5",
+            "team": "Managers Team",
+            "dayOff": false
+        },
+        {
+            "_id": 24,
+            "name": "Man_Team_User6",
+            "team": "Managers Team",
+            "dayOff": false
+        }
+    ]
+}
