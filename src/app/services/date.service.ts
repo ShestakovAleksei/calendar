@@ -11,10 +11,10 @@ export class DateService {
   public dateStream$: Subject<moment.Moment>;
 
   private date!: moment.Moment;
-  private lastDayofMonth: moment.Moment;
+  private lastDayOfMonth: moment.Moment;
 
   constructor() {
-    this.lastDayofMonth = moment().endOf('month');
+    this.lastDayOfMonth = moment().endOf('month');
     this.dateStream$ = new Subject();
     this.dateStream$.subscribe(date => this.date = date);
   }
@@ -24,6 +24,9 @@ export class DateService {
     const currentDays: Day[] = [];
     const daysInMonth: number = currentDate.daysInMonth();
     for ( let i = 1; i <= daysInMonth; i++ ){
+     /* Попробовать сделать клон обьекта с датой и работать с ним
+     *  тогда в аргумент метода 'add()' можно будет подставить  'i' вместо '1'
+     *  при этом работая с изначальной 'currentDate'*/
       const isWeekend = currentDate.isoWeekday() === 6 || currentDate.isoWeekday() === 7;
       const day: Day = {
         date:currentDate.format('D'),
