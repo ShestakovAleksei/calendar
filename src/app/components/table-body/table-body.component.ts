@@ -11,7 +11,7 @@ import { teams } from "../../dataBase/teamsDB";
 })
 export class TableBodyComponent implements OnInit {
 
-  @Input() currentDays: Day[] | undefined;
+  @Input() currentDays!: Day[];
   public teams: Team[] = teams;
   public usersIcon: string = '../../assets/users.png'
 
