@@ -1,0 +1,43 @@
+<ng-template  #popupRef>
+   <div class="popup">
+      <div class="popup__head">
+        <h2 class="popup__title">Vacation Request</h2>
+        <div class="popup__days-counter">
+            {{ this.vacationDaysSum }}
+          <span>Days</span>
+        </div>
+      </div>
+      <div class="popup__body">
+        <div class="popup__dates-info">
+          <h3 class="popup__subtitle">Dates</h3>
+          <div class="popup__inputs-wrapper">
+            <div class="popup__date-input">
+              <label for="dateFrom">From</label>
+              <input id="dateFrom" class="popup__dateFrom" type="date"
+                     (change)="getVacationDatesRange($event)"
+                     [value]="startDate"
+              >
+            </div>
+            <div class="popup__date-input">
+              <label for="dateTo">To</label>
+              <input id="dateTo" class="popup__dateTo" type="date"
+                     (change)="getVacationDatesRange($event)"
+                     [value]="endDate"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="popup__vacation-info">
+          <h3 class="popup__subtitle">Vac Type</h3>
+          <select name="vacation-type" id="vacation-type" class="popup__vacation-type">
+            <option value="Paid Day Off (PD)" class="popup__vacation-option">Paid Day Off (PD)</option>
+            <option value="Unpaid Day Off (UD)" class="popup__vacation-option">Unpaid Day Off (UD)</option>
+          </select>
+        </div>
+      </div>
+      <div class="popup__foot">
+        <button class="popup__cancel-btn button btn">Cancel</button>
+        <button class="popup__accept-btn button btn-success">Send</button>
+      </div>
+   </div>
+</ng-template>
