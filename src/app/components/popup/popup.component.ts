@@ -1,6 +1,6 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import * as moment from "moment";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-popup',
@@ -42,7 +42,7 @@ export class PopupComponent implements OnInit {
 
 
 
-  openModal(template: TemplateRef<any> = this.popupRef) {
+  openModal(template: TemplateRef<any> = this.popupRef): void {
     this.modalRef = this.modalService.show(template);
   }
 
