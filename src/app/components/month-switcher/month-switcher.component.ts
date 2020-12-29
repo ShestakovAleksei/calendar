@@ -8,26 +8,36 @@ import * as moment from 'moment';
   styleUrls: ['./month-switcher.component.scss']
 })
 export class MonthSwitcherComponent implements OnInit {
-  public currentMonth: string;
-  public currentYear: string;
+
+
+  public currentMonth!: string;
+  public currentYear!: string;
   public date!: moment.Moment;
 
+  public prevMonth!: number;
+  public nextMonth!: number;
+
+
   constructor(private dateService: DateService) {
-    this.currentYear = '';
-    this.currentMonth = '';
+  }
+
+
+  ngOnInit(): void {
+    this.nextMonth = 1;
+    this.prevMonth = -1;
+
     this.dateService.dateStream$.subscribe(date => {
       this.date = date;
       this.currentMonth = this.date.format('MMMM');
       this.currentYear = this.date.format('YYYY');
     })
     this.dateService.dateStream$.next(moment());
+  }
 
-  }
-  ngOnInit(): void {
-  }
 
   switchMonth(direction: number): void {
-    this.dateService.monthSwitcher(direction);
+    this.dateService.switchMonth(direction);
   }
+
 
 }
