@@ -16,10 +16,6 @@ export class CalendarTableComponent implements OnInit {
 
 
   constructor(private dateService: DateService) {
-    this.dateService.dateStream$.subscribe(date => {
-      this.currentDays = this.fillDaysArray(date);
-    })
-    this.dateService.dateStream$.next(moment().startOf('month'));
   }
 
 
@@ -49,6 +45,10 @@ export class CalendarTableComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.dateService.dateStream$.subscribe(date => {
+      this.currentDays = this.fillDaysArray(date);
+    })
+    this.dateService.dateStream$.next(moment().startOf('month'));
   }
 
 }
