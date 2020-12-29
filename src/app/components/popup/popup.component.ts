@@ -8,7 +8,6 @@ import * as moment from 'moment';
   styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent implements OnInit {
-
   @ViewChild ('popupRef')
   popupRef!: TemplateRef<any>;
 
@@ -16,6 +15,7 @@ export class PopupComponent implements OnInit {
   public vacationDaysSum!: number;
   public startDate: any;
   public endDate: any;
+
 
   constructor(private modalService: BsModalService) {
   }
