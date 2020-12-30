@@ -3,7 +3,7 @@
       <div class="popup__head">
         <h2 class="popup__title">Vacation Request</h2>
         <div class="popup__days-counter">
-            {{ this.vacationDaysSum }}
+            {{ this.dateService.vacationDaysSum }}
           <span>Days</span>
         </div>
       </div>
@@ -14,15 +14,15 @@
             <div class="popup__date-input">
               <label for="dateFrom">From</label>
               <input id="dateFrom" class="popup__dateFrom" type="date"
-                     (change)="getVacationDatesRange($event)"
-                     [value]="startDate"
+                     (change)="this.dateService.getVacationDatesRange($event)"
+                     [value]="this.dateService.startDate"
               >
             </div>
             <div class="popup__date-input">
               <label for="dateTo">To</label>
               <input id="dateTo" class="popup__dateTo" type="date"
-                     (change)="getVacationDatesRange($event)"
-                     [value]="endDate"
+                     (change)="this.dateService.getVacationDatesRange($event)"
+                     [value]="this.dateService.endDate"
               >
             </div>
           </div>

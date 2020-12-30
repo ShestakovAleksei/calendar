@@ -12,6 +12,9 @@ export class DateService {
 
   private date!: moment.Moment;
   private lastDayOfMonth: moment.Moment;
+  public startDate!: Date;
+  public endDate!: Date;
+  public vacationDaysSum!: number;
 
   constructor() {
     this.lastDayOfMonth = moment().endOf('month');
@@ -34,6 +37,20 @@ export class DateService {
       currentDays.push(day);
     }
     return currentDays;
+  }
+
+  getVacationDatesRange(event: any): void {
+    if (event.target.classList.contains('popup__dateFrom')) {
+      this.startDate = event.target.value;
+    } else {
+      this.endDate = event.target.value;
+    }
+    if (!this.startDate || !this.endDate) { return; }
+    this.vacationDaysSum = Number(moment(this.endDate).format('D'))
+      - Number(moment(this.startDate).format('D'));
+    if (this.vacationDaysSum >= 0) { return; }
+    [this.startDate, this.endDate] = [this.endDate, this.startDate];
+    this.vacationDaysSum *= -1;
   }
 
   switchMonth(direction: number): void {

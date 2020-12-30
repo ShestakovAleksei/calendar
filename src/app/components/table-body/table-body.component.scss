@@ -9,11 +9,13 @@
   &__info-inner{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     padding: 8px;
   }
   &__name{
     margin-right: auto;
+    margin-bottom: 0;
     color: #000000;
     font-size: 14px;
     font-weight: 600;
@@ -23,11 +25,15 @@
     width: 92px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+  }
+  &__participants{
+    display: flex;
   }
   &__participants-icon{
     width: 12px;
     height: 12px;
-    margin-right: 2px;
+    margin-right: 3px;
   }
   &__participants-sum{
     color: #949494;
@@ -52,6 +58,8 @@
     width: 12px;
     height: 7px;
     border: none;
+    position: relative;
+    bottom: 4px;
   }
   &__empty-cell{
     width: 32px;
